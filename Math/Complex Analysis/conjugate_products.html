@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Conjugate Products</title>
+</head>
+<body>
+
+  <div class="heading">
+    <nav class="nav">
+      <div class="nav-list">
+        <a href="../../index.html" class="nav-item">Home</a>
+        <a href="../index.html" class="nav-item">Math</a>
+        <a href="" class="nav-item">Projects</a>
+        <a href="" class="nav-item">Blog</a>
+      </div>
+  
+      <div class="nav-list two">
+        <a href="" class="nav-item">Email</a>
+      </div>
+    </nav>
+    <div class="problem-page">
+      <h1 class="page-title">Conjugate Products</h1>
+      
+      <button type="button" class="definition-btn paragraph" >Def 1. Complex Conjugate</button>
+        <div class="definition">
+          <p class="paragraph">The <b class="bold-def">complex conjugate</b> of a complex number \(z = x+ iy \) is defined as the complex number
+          \(x-iy\) and is denoted by \(\overline{z}\). </p>
+        </div>
+      
+      <p class="paragraph"> <b class="bold-def">Problem: </b> Prove that \(\overline{z^4} = \overline{z}\;^4 \)</p>
+
+      <p class="proof paragraph">Proof:</p>
+
+      <p class="paragraph">We will begin by proving that \(\overline{z_1 z_2} = \overline{z_1} \; \overline{z_2} \)
+        for any two complex numbers \(z_1\) and \(z_2\).
+      </p>
+      <p class="paragraph">Let \(z_1 = x_1 + iy_1\) and \(z_2 = x_2 + i y_2\). Then
+        \begin{align*} 
+          \overline{z_1 z_2} &= \overline{(x_1 + iy_1)(x_2 + i y_2)}\\[5pt]
+          &= \overline{x_1x_2 + i(x_1y_2 + y_1x_2)-y_1y_2} \\[5pt]
+          &= x_1y_2 - i(x_1y_2 + y_1x_2) -y_1y_2\\[5pt]
+          &= (x_1 - iy_1)(x_2 - iy_2)\\[5pt]
+          &= \overline{(x_1 + iy_1)} \;\overline{(x_2 + iy_2)}\\[5pt]
+          &= \overline{z_1} \; \overline{z_2}
+        \end{align*}
+      </p>
+      <p class="paragraph">The rest of the proof follows fairly simply. I will try to be as explicit as possible. We can write
+        \[ \overline{z^4} = \overline{z^2 z^2} =\overline{z^2}\;\overline{z^2} = (\overline{z}\;\overline{z})(\overline{z}\;\overline{z})= \overline{z}\;^4\] </p>
+
+        <p class="qed">Q.E.D.</p>
+    </div>
+  </div>
+  
+
+  <script src="../../script.js"></script>
+</body>
+</html>

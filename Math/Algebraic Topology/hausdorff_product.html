@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+  <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+  <title>Product of Hausdorff Spaces</title>
+</head>
+<body>
+
+  <!-- headings --------------------------------------------------------------------->
+
+  <div class="heading">
+    <nav class="nav">
+      <div class="nav-list">
+        <a href="../../index.html" class="nav-item">Home</a>
+        <a href="../index.html" class="nav-item">Math</a>
+        <a href="" class="nav-item">Projects</a>
+        <a href="" class="nav-item">Blog</a>
+      </div>
+  
+      <div class="nav-list two">
+        <a href="" class="nav-item">Email</a>
+      </div>
+    </nav>
+    <div class="problem-page">
+      <h1 class="page-title">Product of Hausdorff Spaces</h1>
+
+      <!-- Definitions ------------------------------------------------->
+
+      <div class="definition"><p class="paragraph">Def 4. Let \(X\) and \(Y\) be topological spaces. The 
+        <b class="bold-def">product topology</b> on \(X \times Y\) is the topology having as basis the collection \(\mathbb{B}\)
+        of all sets of the form \(U \times V\), where \(U\) is an open set of \(X\) and \(V\) is an open subset of \(Y\).      
+      </p></div>
+
+      <button type="button" class="definition-btn paragraph" >Def 1. Topology</button>
+        <div class="definition">
+          <p class="paragraph">Def 1. A <b class="bold-def">topology</b> on a set \(X\) is a collection \(\mathcal{T}\) of 
+          subsets of \(X\) having the following properties
+            <ol>
+              <li class="paragraph">\(\varnothing\) and \(X\) are in \(\mathcal{T}\)</li>
+              <li class="paragraph">The union of the elements of any finite subcollection of \(\mathcal{T}\) is in \(\mathcal{T}\).</li>
+              <li class="paragraph">The intersection of the elements of any finite subcollection of \(\mathcal{T}\) is in \(\mathcal{T}\).</li>
+            </ol>
+          </p>
+        </div>
+
+        <button type="button" class="definition-btn paragraph" >Def 2. Topological Space</button>
+          <div class="definition">
+            <p class="paragraph">Def 2. A set \(X\) for which a topology \(\mathcal{T}\) has been specified is called a 
+              <b class="bold-def">topological space</b>.
+            </p>
+          </div>
+
+        <button type="button" class="definition-btn paragraph" >Def 3. Hausdorff</button>
+          <div class="definition">
+            <p class="paragraph"> Def 3. A topological space \((X, \mathcal{T})\) is called <b class="bold-def">Hausdorff</b> if given two points \(x,y \in X\)
+            and \(x \neq y \), there exists open disjoint sets \(U, V\) such that \(x \in U\) and \(y \in V\). A subspace of a Hausdorff
+            space is also Hausdorff. </p>
+          </div>
+
+        <button type="button" class="definition-btn paragraph" >Def 4. Product Topology</button>
+        <div class="definition"><p class="paragraph">Def 4. Let \(X\) and \(Y\) be topological spaces. The 
+          <b class="bold-def">product topology</b> on \(X \times Y\) is the topology having as basis the collection \(\mathcal{B}\)
+          of all sets of the form \(U \times V\), where \(U\) is an open set of \(X\) and \(V\) is an open subset of \(Y\).      
+        </p></div>
+       <!-- Problem------------------------------------------------->
+
+
+      <p class="paragraph"> <b class="bold-def">Problem: </b> Prove that the product of Hausdorff spaces is Hausdorf.</p>
+      
+      <button type="button" class="definition-btn paragraph" >Solution</button>
+      <div class="solution">
+        <p class="paragraph">Let's first draw a Hausdorff space. </p>
+        <script type="text/tikz">
+          \begin{tikzpicture}
+            \draw (0,0) ellipse (100pt and 50pt);
+            \draw[dotted, thick] (-1.5,0) circle (25pt);
+            \draw[dotted, thick] (1.5,0) circle (25pt);
+            \draw[thick, fill] (-1.5,0) circle (1pt);
+            \draw[thick, fill] (1.5,0) circle (1pt);
+            \node[above right] at (-1.5, 0) {$x$};
+            \node[above right] at (1.5, 0) {$y$};
+            \node[yshift=1.2cm, xshift=-.5cm] at (1.5,0) {V};
+            \node[yshift=1.2cm, xshift=.5cm] at (-1.5,0) {U};
+            \node[] at (0,-1) {\large X};
+          \end{tikzpicture}
+        </script>
+        <p class="paragraph">Let \(X\) and \(Y\) be Hausforff topological spaces and define the product topology \(X \times Y\).
+          By the definition of <b class="bold-def">product topology</b>, a point in \(X \times Y\) is of the form \((x,y)\) where
+          \(x \in X\) and \(y \in Y\). This means that we can pick two distinct points \((a,b)\) and \((c,d)\) in \(X \times Y\) where \(a \neq c\) or \(b \neq d\) (or both).
+
+        </p>
+          <p class="paragraph">Since \(X\) is Hausdorff there exists open disjoint sets \(U_1,\; U_2\) such that \(a \in U_1\) and 
+            \(c \in U_2\). Likewise, since \(Y\) is Hausdorff there exists open disjoint sets \(V_1,\;V_2\) such that \(b \in V_1\)
+            and \(d \in V_2\). Let's draw a picture.
+          </p>  
+          <script type="text/tikz">
+              \begin{tikzpicture}
+              \draw (4,4) ellipse (100pt and 50pt);
+                \draw[dotted, thick] (2.5,4) circle (25pt);
+                \draw[dotted, thick] (5.5,4) circle (25pt);
+                \draw[thick, fill] (2.5,4) circle (1pt);
+                \draw[thick, fill] (5.5,4) circle (1pt);
+                \node[above right] at (2.5, 4) {$a$};
+                \node[above right] at (5.5, 4) {$c$};
+                \node[yshift=1.2cm, xshift=-.5cm] at (5.5,4) {\(U_2\)};
+                \node[yshift=1.2cm, xshift=.5cm] at (2.5,4) {\(U_1\)};
+                \node[] at (4,3) {\large X};
+              \draw (12,4) ellipse (100pt and 50pt);
+                \draw[dotted, thick] (10.5,4) circle (25pt);
+                \draw[dotted, thick] (13.5,4) circle (25pt);
+                \draw[thick, fill] (10.5,4) circle (1pt);
+                \draw[thick, fill] (13.5,4) circle (1pt);
+                \node[above right] at (10.5, 4) {\(b\)};
+                \node[above right] at (13.5, 4) {\(d\)};
+                \node[yshift=1.2cm, xshift=-.5cm] at (13.5,4) {\(V_2\)};
+                \node[yshift=1.2cm, xshift=.5cm] at (10.5,4) {\(V_1\)};
+                \node[] at (12,3) {\large Y};
+              \end{tikzpicture}
+          </script>  
+          <p class="paragraph">Without loss of generality\(_1\), assume \(b \neq d\). Then \(V_1, \: V_2\) are two open disjoint sets such that \(b \in V_1\) and 
+            \(d \in V_2\). It follows that \(X \times V_1\) and \(X \times V_2\) are open disjoint sets in \(X \times Y\) such that
+          \((a,b) \in X \times V_1\) and \((c,d) \in X \times V_2\). Thus, \(X \times Y\) is Hausdorff. </p>
+          <script type="text/tikz">
+            \begin{tikzpicture}
+              \draw (0,0) ellipse (100pt and 50pt);
+              \draw[dotted, thick] (-1.5,0) circle (25pt);
+              \draw[dotted, thick] (1.5,0) circle (25pt);
+              \draw[thick, fill] (-1.5,0) circle (1pt);
+              \draw[thick, fill] (1.5,0) circle (1pt);
+              \node[above] at (-1.5, 0) {$(a,b)$};
+              \node[above] at (1.5, 0) {$(c,d)$};
+              \node[yshift=1.2cm, xshift=-.5cm] at (1.5,0) {$X$ x $V_2$};
+              \node[yshift=1.2cm, xshift=.5cm] at (-1.5,0) {$X$ x $V_1$};
+              \node[] at (0,-1) {\large $X$ x $Y$};
+            \end{tikzpicture}
+          </script>
+
+          <p class="paragraph qed">Q.E.D.</p>
+
+            <p class="paragraph"><em>1."Without loss of generality" is used when subsequent cases are sufficiently similar
+              to the chosen one in that proving them follows the same logic.</em>
+            </p>
+        </div>
+      
+      </div>
+  </div>
+
+  
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>
