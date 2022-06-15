@@ -186,10 +186,23 @@ ol {
   border-style: solid;
   border-radius: .5rem;
   margin: .5rem 1rem;  
+  cursor: pointer;
+  transition: background-color 0.2s linear;
 }
 
 .defintion-btn:active{
   background-color: black;
+}
+
+.definition-btn:after {
+  font-family: "FontAwesome";
+  content: ' \f0da';
+  color: black;
+}
+
+.active:after{
+  content: '  \f0d7';
+  color: grey;
 }
 
 .definition-btn:hover{
