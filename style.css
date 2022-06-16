@@ -108,7 +108,7 @@ body {
 .subjects {
   display: grid;
   grid-template-columns: 20rem 20rem 20rem;
-  grid-template-rows: 10rem 10rem;
+  grid-template-rows: 11rem 11rem;
   margin-top: 1rem;
 }
 
@@ -146,6 +146,8 @@ li{
   margin: 2rem 0;
   display: none;
   overflow: hidden;
+  padding: 1rem;
+  transition: background-color 0.8s ease;
 }
 
 .problem-page{
@@ -178,7 +180,12 @@ ol {
 
 .active, .definition:hover {
   background-color: antiquewhite;
+  transition: background-color 1s ease;
+}
 
+.definition:hover .bold-def {
+  font-size: 1rem;
+  transition: font-size .5s ease;
 }
 
 .definition-btn{
@@ -208,6 +215,7 @@ ol {
 .definition-btn:hover{
   background-color: antiquewhite;
   box-shadow: 2px 2px 5px 2px rgb(167, 167, 167);
+  transition: background-color 0.5s ease;
 }
 
 .solution {
@@ -216,8 +224,24 @@ ol {
 }
 
 .example {
-  padding: 2rem;
+  background-color: rgb(217, 243, 212);
+  transition: background-color .8s ease;
+  display: none;
+  overflow: hidden;
+  padding: 1rem;
 }
+
+.example:hover{
+  background-color: rgb(231, 255, 226);
+  transition: background-color 1s ease;
+}
+
+.example:hover script{
+  scale: 1.5;
+  transition: scale 1s ease;
+}
+
+
 
 
 
