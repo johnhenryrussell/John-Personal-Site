@@ -63,6 +63,20 @@
             <p class="paragraph"> Def 3. A topological space \((X, \mathcal{T})\) is called <b class="bold-def">Hausdorff</b> if given two points \(x,y \in X\)
             and \(x \neq y \), there exists open disjoint sets \(U, V\) such that \(x \in U\) and \(y \in V\). A subspace of a Hausdorff
             space is also Hausdorff. </p>
+            <script type="text/tikz">
+              \begin{tikzpicture}
+                \draw[color=blue,fill=lightgray, opacity=.5] (0,0) ellipse (100pt and 50pt);
+                \draw[dotted, thick] (-1.5,0) circle (25pt);
+                \draw[dotted, thick] (1.5,0) circle (25pt);
+                \draw[thick, fill] (-1.5,0) circle (1pt);
+                \draw[thick, fill] (1.5,0) circle (1pt);
+                \node[above right] at (-1.5, 0) {$x$};
+                \node[above right] at (1.5, 0) {$y$};
+                \node[yshift=1.2cm, xshift=-.5cm] at (1.5,0) {V};
+                \node[yshift=1.2cm, xshift=.5cm] at (-1.5,0) {U};
+                \node[] at (0,-1) {\large X};
+              \end{tikzpicture}
+            </script>
           </div>
 
         <button type="button" class="definition-btn paragraph" >Def 4. Product Topology</button>
@@ -77,21 +91,7 @@
       
       <button type="button" class="definition-btn paragraph" >Solution</button>
       <div class="solution">
-        <p class="paragraph">Let's first draw a Hausdorff space. </p>
-        <script type="text/tikz">
-          \begin{tikzpicture}
-            \draw (0,0) ellipse (100pt and 50pt);
-            \draw[dotted, thick] (-1.5,0) circle (25pt);
-            \draw[dotted, thick] (1.5,0) circle (25pt);
-            \draw[thick, fill] (-1.5,0) circle (1pt);
-            \draw[thick, fill] (1.5,0) circle (1pt);
-            \node[above right] at (-1.5, 0) {$x$};
-            \node[above right] at (1.5, 0) {$y$};
-            \node[yshift=1.2cm, xshift=-.5cm] at (1.5,0) {V};
-            \node[yshift=1.2cm, xshift=.5cm] at (-1.5,0) {U};
-            \node[] at (0,-1) {\large X};
-          \end{tikzpicture}
-        </script>
+   
         <p class="paragraph">Let \(X\) and \(Y\) be Hausforff topological spaces and define the product topology \(X \times Y\).
           By the definition of <b class="bold-def">product topology</b>, a point in \(X \times Y\) is of the form \((x,y)\) where
           \(x \in X\) and \(y \in Y\). This means that we can pick two distinct points \((a,b)\) and \((c,d)\) in \(X \times Y\) where \(a \neq c\) or \(b \neq d\) (or both).
@@ -103,7 +103,7 @@
           </p>  
           <script type="text/tikz">
               \begin{tikzpicture}
-              \draw (4,4) ellipse (100pt and 50pt);
+              \draw[color=blue,fill=lightgray, opacity=.5] (4,4) ellipse (100pt and 50pt);
                 \draw[dotted, thick] (2.5,4) circle (25pt);
                 \draw[dotted, thick] (5.5,4) circle (25pt);
                 \draw[thick, fill] (2.5,4) circle (1pt);
@@ -113,7 +113,7 @@
                 \node[yshift=1.2cm, xshift=-.5cm] at (5.5,4) {\(U_2\)};
                 \node[yshift=1.2cm, xshift=.5cm] at (2.5,4) {\(U_1\)};
                 \node[] at (4,3) {\large X};
-              \draw (12,4) ellipse (100pt and 50pt);
+              \draw[color=blue,fill=lightgray, opacity=.5] (12,4) ellipse (100pt and 50pt);
                 \draw[dotted, thick] (10.5,4) circle (25pt);
                 \draw[dotted, thick] (13.5,4) circle (25pt);
                 \draw[thick, fill] (10.5,4) circle (1pt);
@@ -130,7 +130,7 @@
           \((a,b) \in X \times V_1\) and \((c,d) \in X \times V_2\). Thus, \(X \times Y\) is Hausdorff. </p>
           <script type="text/tikz">
             \begin{tikzpicture}
-              \draw (0,0) ellipse (100pt and 50pt);
+              \draw[color=blue,fill=lightgray, opacity=.5] (0,0) ellipse (100pt and 50pt);
               \draw[dotted, thick] (-1.5,0) circle (25pt);
               \draw[dotted, thick] (1.5,0) circle (25pt);
               \draw[thick, fill] (-1.5,0) circle (1pt);
