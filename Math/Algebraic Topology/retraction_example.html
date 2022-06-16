@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
   <script src="https://tikzjax.com/v1/tikzjax.js"></script>
   <title>Rectract of Hausdorff Space</title>
 </head>
+
 <body>
 
   <!-- headings --------------------------------------------------------------------->
@@ -24,10 +26,116 @@
         <a href="" class="nav-item">Projects</a>
         <a href="" class="nav-item">Blog</a>
       </div>
-  
+
       <div class="nav-list two">
         <a href="" class="nav-item">Email</a>
       </div>
     </nav>
     <div class="problem-page">
       <h1 class="page-title">Retraction of Hausdorff Space</h1>
+
+
+      <!----------------- definitions-------------------------------------------------------------- -->
+      <div class="list-of-definitions">
+        <button type="button" class="definition-btn paragraph">Def 1. Topology</button>
+        <div class="definition list-of-definitions">
+          <p class="paragraph">Def 1. A <b class="bold-def">topology</b> on a set \(X\) is a collection \(\mathcal{T}\)
+            of
+            subsets of \(X\) having the following properties
+            <ol>
+              <li class="paragraph">\(\varnothing\) and \(X\) are in \(\mathcal{T}\)</li>
+              <li class="paragraph">The union of the elements of any finite subcollection of \(\mathcal{T}\) is in
+                \(\mathcal{T}.\) </li>
+              <li class="paragraph">The intersection of the elements of any finite subcollection of \(\mathcal{T}\) is
+                in \(\mathcal{T}.\)</li>
+            </ol>
+          </p>
+        </div>
+
+        <button type="button" class="definition-btn paragraph">Def 2. Topological Space</button>
+        <div class="definition list-of-definitions">
+          <p class="paragraph">Def 2. A set \(X\) for which a topology \(\mathcal{T}\) has been specified is called a
+            <b class="bold-def">topological space</b>.
+          </p>
+        </div>
+
+        <button type="button" class="definition-btn paragraph">Def 3. Retraction</button>
+        <div class="definition list-of-definitions">
+          <p class="paragraph">Def 3. Let \(X\) be a topological space and \(A\) a subspace of \(X\). Then a
+            continuous map \[f: X \rightarrow A\] is a <b class="bold-def">retraction</b> if the restriction \(f |_A\)
+            is the identity
+            map on \(A\); that is, \(f(a) = a\) for all \(a \in A\). The subspace \(A\) is then called a retract
+            of the original space \(X\). </p>
+          <p class="paragraph">One can also say that a retraction is a continuous mapping from a topological space into
+            a subspace
+            that preserves the positition of all points in that space. </p>
+        </div>
+      </div>
+
+      <!----------------- example-------------------------------------------------------------- -->
+      <div class="example">
+        <p class="paragraph"><b class="bold-def">Example:</b> We can identify the torus \( (S^1 \times S^1)\)
+          as a quotient space by taking \([0,1] \times [0,1]\) and identified edges of the square while preserving the
+          arrow orientation. </p>
+        <p class="paragraph">It's less complicated than it sounds -- imagine connecting the \(A\) sides of the square to
+          form a cylinder.
+          Now, connect the two open ends of the cylinder to form a ring-like shape, i.e a torus.
+        </p>
+        <script type="text/tikz">
+          \begin{tikzpicture}
+              \draw[color=black,fill=lightgray, opacity=.5, ultra thick] (0,0) ellipse (100pt and 40pt);
+              \draw[ultra thick] (1.45,.2) arc [radius=2, start angle=-45, end angle=-135];
+              \draw[ultra thick] (.9,-.245) arc [radius=1.3, start angle=40, end angle=132];
+              \draw (5,2) -- (10,2) -- (10,-3)-- (5,-3)-- cycle;
+              \draw[ultra thick, -latex] (7.4,2) -- (7.5,2);
+              \draw[ultra thick, -latex] (10,-.6) -- (10,-.7);
+              \draw[ultra thick, -latex] (7.4,-3) -- (7.5,-3);
+              \draw[ultra thick, -latex] (5,-.6) -- (5,-.7);
+              \node at (7.4,2.4) {\Large $A$};
+              \node at (10.4,-.5) {\Large $B$};
+              \node at (7.4, -3.4) {\Large $A$};
+              \node at (4.6, -.5) {\Large $B$};
+              \end{tikzpicture}
+          </script>
+        <p class="paragraph">Let \(X = S^1 \times S^1\). We can define \(M\) to be a line around the circumference of
+          \(X\)
+          and \(H\) to be a vertical cross section of \(X\). Notice that \(H\) intersects \(M\) at single point \(c\).
+          Now, define a function \(r: X \rightarrow M \) where \(r(x)\) takes the point \(x\ \in H\) to the unique point
+          \(c \in M\).
+
+        </p>
+        <script type="text/tikz">
+          \begin{tikzpicture}
+              \draw (5,2) -- (10,2) -- (10,-3)-- (5,-3)-- cycle;
+              \draw[ultra thick, -latex] (7.4,2) -- (7.5,2);
+              \draw[ultra thick, -latex] (10,-.6) -- (10,-.7);
+              \draw[ultra thick, -latex] (7.4,-3) -- (7.5,-3);
+              \draw[ultra thick, -latex] (5,-.6) -- (5,-.7);
+              \node at (7.4,2.4) {\Large $A$};
+              \node at (10.4,-.5) {\Large $B$};
+              \node at (7.4, -3.4) {\Large $A$};
+              \node at (4.6, -.5) {\Large $B$};
+              \draw[color=red, thick] (6.5, 2) -- (6.5, -3);
+              \node[color=red, above] at (6.5,2) {\large $H$};
+              \node[color=black, thick]  at (6.5, 0) {\textbullet};
+              \node[color=red, ultra thick, right]  at (6.5, 0) {\Large $x$};
+              \draw[color=blue, thick] (5,-1.5) -- (10, -1.5);
+              \node[color=black, thick]  at (6.5, 0) {\large \textbullet};
+              \node[color=black, thick]  at (6.5, -1.5) {\large \textbullet};
+              \node[color=blue, thick, above right]  at (6.5, -1.5) {\Large $c$};
+              \draw[thick, color=black, -stealth] (6.2, -.2) -- (6.2, -1.2);
+              \node[left] at (6.2, -.7) {\large $r$};
+              \node[color=blue, right] at (10,-1.5) {\large $M$};
+            \end{tikzpicture}
+          </script>
+
+        <p class="paragraph">It's clear that \(r\) is continuous since \(r^{-1}(U)\) is open when \(U\) is an open
+          subset of \(X\).
+          Furthermore, \(r(c)=c\) for all \(c \in M\). Hence, \(r\) is a retraction.
+        </p>
+      </div>
+      <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+      <script src="../../script.js"></script>
+</body>
+
+</html>

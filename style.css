@@ -3,48 +3,135 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 
@@ -71,11 +158,17 @@ body {
   margin-top: 2rem;
 }
 
-.page-title, .nav-item, .paragraph, .subject-list, .theorem, .qed, .list {
+.page-title,
+.nav-item,
+.paragraph,
+.subject-list,
+.theorem,
+.qed,
+.list {
   font-family: 'Roboto Mono', monospace, sans-serif;
 }
 
-.page-title{
+.page-title {
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -87,7 +180,8 @@ body {
   font-weight: 800;
 }
 
-.nav-item:hover, .math-links:hover {
+.nav-item:hover,
+.math-links:hover {
   color: black;
   background-color: antiquewhite;
   font-weight: 900;
@@ -112,7 +206,40 @@ body {
   margin-top: 1rem;
 }
 
-li{
+#mobile {
+  display: none;
+  flex-direction: row;
+}
+
+@media (max-width: 980px) {
+  .subjects {
+    grid-template-columns: 20rem 20rem;
+    grid-template-rows: 11rem 11rem 11rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .subjects {
+    grid-template-columns: 20rem;
+    grid-template-rows: 11rem 11rem 11rem 11rem 11rem 11rem;
+  }
+
+  #desktop {
+    display: none;
+  }
+
+  #mobile {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    margin: 1rem;
+  }
+}
+
+
+li {
   margin-bottom: 1rem;
 }
 
@@ -127,7 +254,7 @@ li{
   font-size: .8rem;
 }
 
-.problem-list{
+.problem-list {
   padding: 1rem 0;
 }
 
@@ -147,14 +274,15 @@ li{
   display: none;
   overflow: hidden;
   padding: 1rem;
-  transition: background-color 0.8s ease;
+  transition: background-color 1.5s ease;
+  grid-area: collapse;
 }
 
-.problem-page{
+.problem-page {
   max-width: 42rem;
 }
 
-.proof{
+.proof {
   color: red;
 }
 
@@ -163,7 +291,7 @@ li{
 }
 
 ol li {
-  list-style-type:decimal;
+  list-style-type: decimal;
   list-style-position: inside;
 }
 
@@ -178,9 +306,10 @@ ol {
   font-weight: 500;
 }
 
-.active, .definition:hover {
+.active,
+.definition:hover {
   background-color: antiquewhite;
-  transition: background-color 1s ease;
+  transition: background-color 1.5s ease;
 }
 
 .definition:hover .bold-def {
@@ -188,31 +317,32 @@ ol {
   transition: font-size .5s ease;
 }
 
-.definition-btn{
+.definition-btn {
   background-color: white;
   border-style: solid;
   border-radius: .5rem;
-  margin: .5rem 1rem;  
+  margin: .5rem 1rem;
   cursor: pointer;
+  min-width: 18rem;
   transition: background-color 0.2s linear;
 }
 
-.defintion-btn:active{
+.defintion-btn:active {
   background-color: black;
 }
 
 .definition-btn:after {
   font-family: "FontAwesome";
   content: ' \f0da';
-  color: black;
+  color: rgb(0, 99, 129);
 }
 
-.active:after{
+.active:after {
   content: '  \f0d7';
   color: grey;
 }
 
-.definition-btn:hover{
+.definition-btn:hover {
   background-color: antiquewhite;
   box-shadow: 2px 2px 5px 2px rgb(167, 167, 167);
   transition: background-color 0.5s ease;
@@ -226,21 +356,13 @@ ol {
 .example {
   background-color: rgb(217, 243, 212);
   transition: background-color .8s ease;
-  display: none;
-  overflow: hidden;
   padding: 1rem;
 }
 
-.example:hover{
-  background-color: rgb(231, 255, 226);
+.example:hover {
+  background-color: rgb(176, 255, 238);
   transition: background-color 1s ease;
 }
-
-.example:hover script{
-  scale: 1.5;
-  transition: scale 1s ease;
-}
-
 
 
 
@@ -273,6 +395,3 @@ ol {
   gap: .75rem;
   margin: 4rem .5rem;
 } */
-
-
-
