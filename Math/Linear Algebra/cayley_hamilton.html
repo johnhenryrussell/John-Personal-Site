@@ -80,30 +80,54 @@
 
       <p class="paragraph"> <b class="bold-def">Problem: </b> Let \(A = \begin{pmatrix} 1&2&3\\7&3&5\\-6&4&2
         \end{pmatrix} \). Use
-        the Cayley-Hamilton theorem to find \(A^{-1}\)</p>
+        the Cayley-Hamilton theorem to find \(A^{-1}.\)</p>
       <button type="button" class="definition-btn paragraph">Solution</button>
       <div class="solution">
 
         <p class="paragraph">We will begin by finding the characteristic polynomial of \(A\). </p>
 
-        <p class="paragraph"> \( f(t) = \det(A - tI_n) = \det \begin{pmatrix} (1-t)&0&0\\7&(3-t)&5\\-6&4&(2-t)
-          \end{pmatrix} \)
-        </p>
-
-        <p class="paragraph">Now, following Def 1 we get </p>
         <p class="paragraph">
-          \( \begin{align} f(t) &= (1-t) \det \begin{pmatrix} (3-t)&5\\4&(2-t) \end{pmatrix} - 2 \det \begin{pmatrix}
+          \[ \begin{align} f(t) &= \det(A - tI_n) = \det \begin{pmatrix} (1-t)&0&0\\7&(3-t)&5\\-6&4&(2-t)
+          \end{pmatrix}\\
+          \\
+          \\
+          &= (1-t) \det \begin{pmatrix} (3-t)&5\\4&(2-t) \end{pmatrix} - 2 \det \begin{pmatrix}
           7&5\\-6&(2-t) \end{pmatrix}
           + 3\begin{pmatrix} 7&(3-t)\\-6&4 \end{pmatrix} \\
           \\
-          &=(1-t)(t^2-5t-14) - 2(-7t + 44) + 3(-6t + 46)
-          \end{align}  \)
+          \\
+          &=(1-t)(t^2-5t-14) - 2(-7t + 44) + 3(-6t + 46)\\
+          \\
+          \\
+          f(t) &=\color{red} -t^3 + 6t^2 + 5t + 36
+          \end{align} \]
         </p>
 
+        <p class="paragraph">The Cayley-Hamilton theorem tells us that
+        </p>
+        <p class="paragraph">\[f(A) = -A^3 + 6A^2 + 5A + 36 \, \mathcal{I} = \mathcal{O} \]. </p>
 
+        <p class="paragraph">Solving for \(\mathcal{I}\), we get</p>
+        <p class="paragraph">\[
+          \begin{align}
+          \mathcal{I} &= \frac{1}{36}(A^3-6A^2-5A)\\
+          \\
+          &=A \bigg(\frac{A^2-6A -5}{36}\bigg)
+          \end{align}
+          \]</p>
+        <p class="paragraph">Notice that the above equation is of the form \(AA^{-1} = \mathcal{I} \). Thus,
+          by Def. 2
+        </p>
+        <p class="paragraph">\[A^{-1} = \bigg(\frac{A^2-6A -5}{36}\bigg)\]</p>
 
+        <p class="paragraph">Lastly, we can plug \(A\) into the above equation to get our inverse.</p>
+        <p class="paragraph">
+          \[ \mathbf{A^{-1}=\begin{pmatrix} -\frac{7}{18}&\frac{2}{9}&\frac{1}{36}\\
+          -\frac{11}{9}&\frac{5}{9}&\frac{4}{9}\\
+          \frac{23}{18}&-\frac{4}{9}&-\frac{11}{36}
+          \end{pmatrix}} \]
+        </p>
 
-        <p class="qed">Q.E.D.</p>
       </div>
     </div>
   </div>
