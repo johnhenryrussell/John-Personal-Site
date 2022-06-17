@@ -220,8 +220,11 @@ body {
 
 @media (max-width: 720px) {
   .subjects {
-    grid-template-columns: 20rem;
+    grid-template-columns: 16rem;
     grid-template-rows: 11rem 11rem 11rem 11rem 11rem 11rem;
+  }
+  .size {
+    max-width: 33rem;
   }
 
   #desktop {
@@ -229,7 +232,7 @@ body {
   }
 
   #mobile {
-    display: flex;
+    display: block;
   }
 
   .nav-list {
@@ -364,8 +367,9 @@ ol {
   transition: background-color 1s ease;
 }
 
-
-
+#desktop:first-child{
+  margin-bottom: 1rem;
+}
 
 
 /* body {
