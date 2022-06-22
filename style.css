@@ -197,6 +197,16 @@ body {
   line-height: 1.6;
 }
 
+.cat-picture {
+  max-width: 18rem;
+  border-radius: 80%;
+  border: 1px solid aliceblue;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* math page -------------------------------------*/
 
 .subjects {
