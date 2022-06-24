@@ -171,7 +171,9 @@ body {
 .qed,
 .list,
 .title,
-.author{
+.author,
+.x,
+.book-description {
   font-family: 'Roboto Mono', monospace, sans-serif;
 }
 
@@ -389,13 +391,9 @@ ol {
   margin-bottom: 1rem;
 }
 
-.library-container {
-  display: grid;
-  grid-template: 50px 50px / 100px;
-}
-
 .textbook-image {
-  max-width: 8rem;
+  max-width: 8.5rem;
+  min-height: 12.85rem;
   border: 4px solid rgb(0, 0, 0);
   vertical-align: sub;
   box-shadow: 10px 5px 5px rgb(168, 168, 168);
@@ -405,23 +403,20 @@ ol {
   cursor: pointer;
 }
 
-.item-textbook {
-  transition: all .5s;
-}
-
 .item-textbook:hover {
   transform: scale(1.05);
 }
 
 .library {
   display: grid;
-  grid-template: 1fr 1fr / 500px 500px 500px;
-  margin: 2rem 0;
+  grid-template: 1fr 1fr 1fr / 500px 500px 500px;
+  margin: 3rem 0;
   row-gap: 6rem;
 }
 
 .item-textbook {
   display: flex;
+  transition: all .5s
 }
 
 .title {
@@ -442,34 +437,79 @@ ol {
 }
 
 .blur {
-  filter: blur(.25rem);
+  filter: blur(.45rem);
+  transition: filter .75s ease-out;
+  pointer-events: none;
+}
+
+.textbook-zoom {
+  display: flex;
+  transform: scale(1.3);
+  transition: all 1s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.model {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border: 2px solid black;
+  background-color: rgb(218, 218, 218);
+  padding: 2.5rem;
+  opacity: 90%;
+  animation-name: modal-move;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  min-height: 12rem;
+  filter: drop-shadow(16px 16px 10px rgb(63, 63, 63));
+}
+
+@keyframes modal-move {
+  from {
+    transform: scale(.1);
+    filter: blur(2rem);
+    max-width: 8rem;
+    filter: grayscale(1);
+  }
+  to {
+    transform: scale(1);
+    transform: translate(-50%, -50%);
+    filter: blur(0);
+    max-width: 60rem;
+    filter: grayscale(1);
+    filter: drop-shadow(16px 16px 10px rgb(63, 63, 63));
+  }
 }
 
 
-/* body {
-  background-color: rgb(221, 221, 221);
+.model-textbook {
   display: flex;
 }
 
-.nav {
-  overflow-x: auto;
-  transition: opacity 0.2s, transform 0.2s;
-  width: 8.75rem;
+.x {
+  position: absolute;
+  max-width: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  margin: 1rem;
 }
 
-.nav-item {
-  font-family: 'Roboto Mono', monospace, sans-serif;
-  text-decoration: none;
-  color: black;
-  font-size: 1rem;
-  display: inline-block;
-  margin: 0 5px;
-  display: inline-block;
+.book-description {
+  font-size: .9rem;
+  line-height: 1.6;
+  margin: .5rem 1rem;
+  font-weight: 500;
+  letter-spacing: .02rem;
 }
 
-.nav-list {
-  display: flex;
-  flex-direction: column;
-  gap: .75rem;
-  margin: 4rem .5rem;
-} */
+.material-symbols-outlined {
+  text-align: center;
+  vertical-align: text-bottom;
+}

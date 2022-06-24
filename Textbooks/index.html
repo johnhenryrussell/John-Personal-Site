@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>Textbooks</title>
 </head>
 
@@ -38,73 +39,217 @@
 
       <h1 class="page-title">Textbooks</h1>
 
-      <p class="paragraph size">Here is a list of my favorite Math textbooks. I've been collecting for over a decade now--these 
+      <p class="paragraph size">Here is a list of my favorite Math textbooks. I've been collecting for over a decade
+        now--these
         are the most timeless.
       </p>
 
-      <div class="library">
-        
-        <div class="item-textbook" id="textbook">
-          <img class="textbook-image" src="Naive.jpg" alt="">
-          <div class="book-info-container">
-            <p class="title">Naive Set Theory</p>
-            <p class="author">Paul Halmos</p>
-            <p class="author">Career: All</p>
-          </div>
-        </div>
+      <div class="library-container">
 
-        <div class="item-textbook" id="textbook">
-          <img class="textbook-image" src="LinearAlgebra.jpg" alt="">
-          <div class="book-info-container">
-            <p class="title">Linear Algebra</p>
-            <p class="author">Friedberg, Insel, Spence</p>
-            <p class="author">Career: Undergraduate</p>
-          </div>
-        </div>
+        <div class="library">
 
-        <div class="item-textbook" id="textbook">
-          <img class="textbook-image" src="AlgebraicTopology.jpg" alt="">
-          <div class="book-info-container">
-            <p class="title">Algebraic Topology</p>
-            <p class="author">Allen Hatcher</p>
-            <p class="author">Career: Graduate</p>
+          <div class="item-textbook naive" id="textbook" data-book="naive">
+            <img class="textbook-image" src="Naive.jpg" alt="">
+            <div class="book-info-container">
+              <p class="title">Naive Set Theory</p>
+              <p class="author">Paul Halmos</p>
+              <p class="author">Career: All</p>
+            </div>
           </div>
-        </div>
 
-        <div class="item-textbook" id="textbook">
-          <img class="textbook-image" src="ComplexVariables.jpg" alt="">
-          <div class="book-info-container">
-            <p class="title">Complex Variables</p>
-            <p class="author">Brown, Churchill</p>
-            <p class="author">Career: Undergraduate</p>
+          <div class="item-textbook linear" id="textbook" data-book="linear">
+            <img class="textbook-image" src="LinearAlgebra.jpg" alt="">
+            <div class="book-info-container">
+              <p class="title">Linear Algebra</p>
+              <p class="author">Friedberg, Insel, Spence</p>
+              <p class="author">Career: All</p>
+            </div>
           </div>
-        </div>
 
-        <div class="item-textbook" id="textbook">
-          <img class="textbook-image" src="UnderstandingAnalysis.jpg" alt="">
-          <div class="book-info-container">
-            <p class="title">Understanding Analysis</p>
-            <p class="author">Stephen Abbott</p>
-            <p class="author">Career: Undergraduate</p>
+          <div class="item-textbook algebraic" id="textbook" data-book="algebraic">
+            <img class="textbook-image" src="AlgebraicTopology.jpg" alt="">
+            <div class="book-info-container">
+              <p class="title">Algebraic Topology</p>
+              <p class="author">Allen Hatcher</p>
+              <p class="author">Career: Graduate</p>
+            </div>
           </div>
-        </div>
 
-        <div class="item-textbook" id="textbook">
-          <img class="textbook-image" src="AbstractAlgebra.jpg" alt="">
-          <div class="book-info-container">
-            <p class="title">Abstract Algebra</p>
-            <p class="author">Dummit, Foote</p>
-            <p class="author">Career: Undergraduate</p>
+          <div class="item-textbook complex" id="textbook" data-book="complex">
+            <img class="textbook-image" src="ComplexVariables.jpg" alt="">
+            <div class="book-info-container">
+              <p class="title">Complex Variables</p>
+              <p class="author">Brown, Churchill</p>
+              <p class="author">Career: Undergraduate</p>
+            </div>
           </div>
-        </div>
 
+          <div class="item-textbook understanding" id="textbook" data-book="understanding">
+            <img class="textbook-image" src="UnderstandingAnalysis.jpg" alt="">
+            <div class="book-info-container">
+              <p class="title">Understanding Analysis</p>
+              <p class="author">Stephen Abbott</p>
+              <p class="author">Career: Undergraduate</p>
+            </div>
+          </div>
+
+          <div class="item-textbook abstract" id="textbook" data-book="abstract">
+            <img class="textbook-image" src="AbstractAlgebra.jpg" alt="">
+            <div class="book-info-container">
+              <p class="title">Abstract Algebra</p>
+              <p class="author">Dummit, Foote</p>
+              <p class="author">Career: Undergraduate</p>
+            </div>
+          </div>
+
+          <div class="item-textbook proofs" id="textbook" data-book="proofs">
+            <img class="textbook-image" src="Proof.jpg" alt="">
+            <div class="book-info-container">
+              <p class="title">Mathematical Proofs</p>
+              <p class="author">Chartrand, Polimeni, Zhang</p>
+              <p class="author">Career: Undergraduate</p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
 
-    <div class="zoom-in-item">
-      
+
+  </div>
+
+  <div class="modal-container">
+
+    <div class="model naive hidden">
+      <div class="model-textbook naive">
+        <a href="https://www.amazon.com/Naive-Theory-Dover-Books-Mathematics/dp/0486814874/ref=sr_1_1?crid=2ZZQVPARQNCOO&keywords=naive+set+theory&qid=1656032112&sprefix=naive+set+theory%2Caps%2C63&sr=8-1" 
+        target="_blank"><img class="textbook-image" src="Naive.jpg" alt=""></a> 
+        <div class="book-info-container">
+          <p class="title">Naive Set Theory</p>
+          <p class="author">Paul Halmos</p>
+          <p class="author">Career: All</p>
+          <p class="book-description">Review: I was advised to read this book the summer before beginning graduate school. I found it
+            to be an excellent introduction to the subject without lacking the necessary rigor. It's a necessary read for all 
+            aspiring mathematicians. 
+          </p>
+          <button class="x" type="button" id="xbutton"><span class="material-symbols-outlined">
+            close
+            </span></button>
+        </div>
+
+      </div>
     </div>
+
+    <div class="model linear hidden">
+      <div class="model-textbook linear" data-book="linear">
+        <a href="https://www.amazon.com/Linear-Algebra-Stephen-H-Friedberg-ebook/dp/B00HR7MRO6/ref=sr_1_5?keywords=linear+algebra+friedberg&qid=1656032143&sprefix=linear+algebra+friedber%2Caps%2C69&sr=8-5" 
+        target="_blank"><img class="textbook-image" src="LinearAlgebra.jpg" alt=""></a>
+        <div class="book-info-container">
+          <button class="x" type="button" id="xbutton"><span class="material-symbols-outlined">
+            close
+            </span></button>
+          <p class="title">Linear Algebra</p>
+          <p class="author">Friedberg, Insel, Spence</p>
+          <p class="author">Career: All</p>
+          <p class="book-description">Review: 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="model algebraic hidden">
+      <div class="model-textbook linear" data-book="linear">
+        <a href="https://www.amazon.com/Algebraic-Topology-Allen-Hatcher/dp/0521795400/ref=sr_1_1?crid=3RIRO8PFMC8GE&keywords=algebraic+topology+hatcher&qid=1656032075&sprefix=algebraic+topology+hatcher%2Caps%2C63&sr=8-1" 
+        target="_blank"><img class="textbook-image" src="AlgebraicTopology.jpg" alt=""></a>
+        <div class="book-info-container">
+          <button class="x" type="button" id="xbutton"><span class="material-symbols-outlined">
+            close
+            </span></button>
+          <p class="title">Algebraic Topology</p>
+          <p class="author">Allen Hatcher</p>
+          <p class="author">Career: Graduate</p>
+          <p class="book-description">This is a wonderful book. Excellent collection of
+            problems.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="model complex hidden">
+      <div class="model-textbook linear" data-book="complex">
+        <a href="https://www.amazon.com/Complex-Variables-Applications-Brown-Churchill/dp/0073383171/ref=sr_1_1?crid=1P7F4KCPM57AN&keywords=complex+analysis+brown&qid=1656034992&sprefix=complex+analysis+brown%2Caps%2C60&sr=8-1" 
+        target="_blank"><img class="textbook-image" src="ComplexVariables.jpg" alt=""></a>
+        <div class="book-info-container">
+          <button class="x" type="button" id="xbutton"><span class="material-symbols-outlined">
+            close
+            </span></button>
+          <p class="title">Complex Variables</p>
+          <p class="author">Brown, Churchill</p>
+          <p class="author">Career: Undergraduate</p>
+          <p class="book-description">This is a wonderful book. Excellent collection of
+            problems.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="model understanding hidden">
+      <div class="model-textbook understanding" data-book="understanding">
+        <a href="https://www.amazon.com/Understanding-Analysis-Undergraduate-Texts-Mathematics/dp/1493927116/ref=sr_1_1?keywords=understanding+analysis&qid=1656035415&sprefix=understanding+ana%2Caps%2C69&sr=8-1" 
+        target="_blank"><img class="textbook-image" src="UnderstandingAnalysis.jpg" alt=""></a>
+        <div class="book-info-container">
+          <button class="x" type="button" id="xbutton"><span class="material-symbols-outlined">
+            close
+            </span></button>
+          <p class="title">Understanding Analysis</p>
+          <p class="author">Stephen Abbott</p>
+          <p class="author">Career: Undergraduate</p>
+          <p class="book-description">This is a wonderful book. Excellent collection of
+            problems.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="model abstract hidden">
+      <div class="model-textbook abstract" data-book="abstract">
+        <a href="https://www.amazon.com/Abstract-Algebra-3rd-David-Dummit/dp/0471433349/ref=sr_1_1?keywords=abstract+algebra+dummit&qid=1656035445&sprefix=abstract+al%2Caps%2C73&sr=8-1" 
+        target="_blank"><img class="textbook-image" src="AbstractAlgebra.jpg" alt=""></a>
+        <div class="book-info-container">
+          <button class="x" type="button" id="xbutton"><span class="material-symbols-outlined">
+            close
+            </span></button>
+          <p class="title">Abstract Algebra</p>
+          <p class="author">Dummit, Foote</p>
+          <p class="author">Career: Undergraduate</p>
+          <p class="book-description">This is a wonderful book. Excellent collection of
+            problems.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="model proofs hidden">
+      <div class="model-textbook proofs" data-book="proofs">
+        <a href="https://www.amazon.com/Mathematical-Proofs-Transition-Advanced-Mathematics/dp/0321797094/ref=sr_1_2?crid=2RIAFL9CZYWRS&keywords=mathematical+proofs+chartrand&qid=1656035318&sprefix=mathematical+proofs+chartrand%2Caps%2C59&sr=8-2" 
+        target="_blank"><img class="textbook-image" src="Proof.jpg" alt=""></a>
+        <div class="book-info-container">
+          <button class="x" type="button" id="xbutton"><span class="material-symbols-outlined">
+            close
+            </span></button>
+          <p class="title">Mathematical Proofs</p>
+          <p class="author">Chartrand, Polimeni, Zhang</p>
+          <p class="author">Career: Undergraduate</p>
+          <p class="book-description">This is a wonderful book. Excellent collection of
+            problems.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   </div>
   <script src="../script.js"></script>
 </body>
