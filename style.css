@@ -125,7 +125,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -133,8 +133,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-
 
 /* Heading------------------------------------- */
 body {
@@ -172,9 +170,10 @@ body {
 .list,
 .title,
 .author,
+.input-container,
 .x,
 .book-description {
-  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-family: "Roboto Mono", monospace, sans-serif;
 }
 
 .page-title {
@@ -185,7 +184,7 @@ body {
 .nav-item {
   color: rgb(141, 141, 141);
   text-decoration: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 800;
 }
 
@@ -202,7 +201,7 @@ body {
 
 .paragraph {
   margin: 1rem 0;
-  font-size: .9rem;
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 
@@ -261,7 +260,6 @@ body {
   }
 }
 
-
 li {
   margin-bottom: 1rem;
 }
@@ -273,8 +271,8 @@ li {
 .math-links {
   color: rgb(104, 104, 104);
   text-decoration: none;
-  padding: .5rem 0;
-  font-size: .8rem;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
 }
 
 .problem-list {
@@ -301,7 +299,8 @@ li {
   grid-area: collapse;
 }
 
-.problem-page, .library {
+.problem-page,
+.library {
   max-width: 42rem;
 }
 
@@ -329,6 +328,13 @@ ol {
   font-weight: 500;
 }
 
+.year-size {
+  max-width: 50rem;
+  background-color: antiquewhite;
+  margin: 2rem 0;
+  font-weight: 500;
+}
+
 .active,
 .definition:hover {
   background-color: antiquewhite;
@@ -337,14 +343,14 @@ ol {
 
 .definition:hover .bold-def {
   font-size: 1rem;
-  transition: font-size .5s ease;
+  transition: font-size 0.5s ease;
 }
 
 .definition-btn {
   background-color: white;
   border-style: solid;
-  border-radius: .5rem;
-  margin: .5rem 1rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem 1rem;
   cursor: pointer;
   min-width: 18rem;
   transition: background-color 0.2s linear;
@@ -356,12 +362,12 @@ ol {
 
 .definition-btn:after {
   font-family: "FontAwesome";
-  content: ' \f0da';
+  content: " \f0da";
   color: rgb(0, 99, 129);
 }
 
 .active:after {
-  content: '  \f0d7';
+  content: "  \f0d7";
   color: grey;
 }
 
@@ -378,7 +384,7 @@ ol {
 
 .example {
   background-color: rgb(217, 243, 212);
-  transition: background-color .8s ease;
+  transition: background-color 0.8s ease;
   padding: 1rem;
 }
 
@@ -399,7 +405,7 @@ ol {
   box-shadow: 10px 5px 5px rgb(168, 168, 168);
 }
 
-.textbook-image:hover{
+.textbook-image:hover {
   cursor: pointer;
 }
 
@@ -416,7 +422,7 @@ ol {
 
 .item-textbook {
   display: flex;
-  transition: all .5s
+  transition: all 0.5s;
 }
 
 .title {
@@ -427,8 +433,8 @@ ol {
 
 .author {
   font-weight: lighter;
-  font-size: .8rem;
-  margin: .5rem 1rem;
+  font-size: 0.8rem;
+  margin: 0.5rem 1rem;
 }
 
 .book-info-container {
@@ -437,8 +443,8 @@ ol {
 }
 
 .blur {
-  filter: blur(.45rem);
-  transition: filter .75s ease-out;
+  filter: blur(0.45rem);
+  transition: filter 0.75s ease-out;
   pointer-events: none;
 }
 
@@ -463,7 +469,7 @@ ol {
   padding: 2.5rem;
   opacity: 90%;
   animation-name: modal-move;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-out;
   min-height: 12rem;
   filter: drop-shadow(16px 16px 10px rgb(63, 63, 63));
@@ -471,7 +477,7 @@ ol {
 
 @keyframes modal-move {
   from {
-    transform: scale(.1);
+    transform: scale(0.1);
     filter: blur(2rem);
     max-width: 8rem;
     filter: grayscale(1);
@@ -485,7 +491,6 @@ ol {
     filter: drop-shadow(16px 16px 10px rgb(63, 63, 63));
   }
 }
-
 
 .model-textbook {
   display: flex;
@@ -502,14 +507,35 @@ ol {
 }
 
 .book-description {
-  font-size: .9rem;
+  font-size: 0.9rem;
   line-height: 1.6;
-  margin: .5rem 1rem;
+  margin: 0.5rem 1rem;
   font-weight: 500;
-  letter-spacing: .02rem;
+  letter-spacing: 0.02rem;
 }
 
 .material-symbols-outlined {
   text-align: center;
   vertical-align: text-bottom;
+}
+
+.matrix-container {
+  display: grid;
+  margin: 4rem;
+  gap: .25rem;
+}
+
+.input-container {
+  margin-left: 4rem;
+  display: grid;
+  grid-template: 1.5rem 1.5rem 1.5rem / 3rem 3rem;
+  gap: .4rem ;
+}
+
+.box {
+  max-width: 3rem;
+}
+
+.input-form-container {
+  display: flex;
 }

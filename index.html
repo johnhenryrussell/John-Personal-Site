@@ -1,62 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d843ffcd90.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>John Russell</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/d843ffcd90.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-  <title>John Russell</title>
-</head>
-
-<body>
-  <nav class="nav" id="mobile">
-    <div class="nav-list">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="Math/index.html" class="nav-item">Math</a>
-      <a href="" class="nav-item">Projects</a>
-      <a href="Textbooks/index.html" class="nav-item">Textbooks</a>
-      <a href="" class="nav-item">Email</a>
-    </div>
-  </nav>
-
-
-  <div class="heading">
-    <nav class="nav" id="desktop">
+  <body>
+    <nav class="nav" id="mobile">
       <div class="nav-list">
         <a href="index.html" class="nav-item">Home</a>
         <a href="Math/index.html" class="nav-item">Math</a>
         <a href="" class="nav-item">Projects</a>
         <a href="Textbooks/index.html" class="nav-item">Textbooks</a>
-      </div>
-
-      <div class="nav-list two">
         <a href="" class="nav-item">Email</a>
       </div>
     </nav>
 
-    <div class="page">
-      <h1 class="page-title">John Russell</h1>
-      <p class="intro paragraph">I am currently getting my master's degree in Mathematics. I plan to pursure a PhD at
-        some point, but right now I am weighing my options concerning industry work.</p>
-      <p class="second paragraph">Other than Math, I have a keen interest in pedagogy. I <em>attempt</em> to post a
-        solution to an interesting problem every week. My current obsession is Algebraic Topology.</p>
-      <p class="third paragraph">I have two cats (Bowie and Ziggy), enjoy going on moderate hikes, and like to sail. I plan to post
-        some pictures from my adventures one day. </p>
+    <div class="heading">
+      <nav class="nav" id="desktop">
+        <div class="nav-list">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="Math/index.html" class="nav-item">Math</a>
+          <a href="Projects/matrixCalc.html" class="nav-item">Projects</a>
+          <a href="Textbooks/index.html" class="nav-item">Textbooks</a>
+        </div>
 
-        <img class="cat-picture" src="IMG-1046.JPEG" alt="">
+        <div class="nav-list two">
+          <a href="" class="nav-item">Email</a>
+        </div>
+      </nav>
+
+      <div class="page">
+        <h1 class="page-title">John Russell</h1>
+        <p class="intro paragraph">
+          I am currently getting my master's degree in Mathematics. I plan to
+          pursure a PhD at some point, but right now I am weighing my options
+          concerning industry work.
+        </p>
+        <p class="second paragraph">
+          Other than Math, I have a keen interest in pedagogy. I
+          <em>attempt</em> to post a solution to an interesting problem every
+          week. My current obsession is Algebraic Topology.
+        </p>
+        <p class="third paragraph">
+          I have two cats (Bowie and Ziggy), enjoy going on moderate hikes, and
+          like to sail. I plan to post some pictures from my adventures one day.
+        </p>
+
+        <img class="cat-picture" src="IMG-1046.JPEG" alt="" />
+      </div>
     </div>
-  </div>
 
 
 
+<div class="input-container">
+  <label for="rows">Rows</label>
+  <label for="columns">Columns</label>
+  <input type="number" class="box rows" name="rows">
+  
+  <input type="number" class="box columns" name="columns">
+ 
+  
+  <button class="enter-button">enter</button>
+</div>
 
-  <script src="script.js"></script>
-</body>
 
+
+<div class="matrix-container"></div>
+
+
+    <script src="scripts/script.js"></script>
+</script> 
+  </body>
 </html>
