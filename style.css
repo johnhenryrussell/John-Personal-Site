@@ -460,6 +460,7 @@ ol {
 
 .model {
   position: fixed;
+  min-width: 45rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -521,15 +522,15 @@ ol {
 
 .matrix-container {
   display: grid;
-  margin: 4rem;
-  gap: .25rem;
+  margin-top: 4rem;
+  gap: 0.25rem;
 }
 
 .input-container {
   margin-left: 4rem;
-  display: grid;
-  grid-template: 1.5rem 1.5rem 1.5rem / 3rem 3rem;
-  gap: .4rem ;
+  display: flex;
+  grid-template: 1.5rem 1.5rem / 3rem 3rem;
+  gap: 0.4rem;
 }
 
 .box {
@@ -538,4 +539,13 @@ ol {
 
 .input-form-container {
   display: flex;
+}
+
+.flex-matrix-container {
+  display: flex;
+}
+
+.left {
+  margin-left: 4rem;
+  margin-right: 3rem;
 }

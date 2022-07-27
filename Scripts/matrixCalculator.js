@@ -1,7 +1,7 @@
-const matrixContainer = document.querySelector('.matrix-container');
-let rows = 0;
-let columns = 0;
-const enterButton = document.querySelector('.enter-button');
+const matrixContainer = document.querySelectorAll('.matrix-container');
+let rows = 2;
+let columns = 2;
+const matrixDropdown = document.querySelector('.matrix-size-dropdown');
 
 // const matrixOne = [1, 2, 3, 4];
 // const matrixTwo = [5, 6, 7, 8];
@@ -22,13 +22,16 @@ function removeAllChildNodes(parent) {
 
 function generateMatrixElements(rowSize, columnSize) {
   if (rowSize === columnSize) {
-    matrixContainer.style.gridTemplate = `repeat(${rowSize}, 2rem) / repeat(${columnSize}, 2rem)`;
-    const size = rowSize * columnSize;
-    for (let i = 0; i < size; i += 1) {
-      const matrixElement = document.createElement('input');
-      matrixElement.className = 'mat-element';
-      matrixContainer.appendChild(matrixElement);
-    }
+    matrixContainer.forEach((matrix) => {
+      // eslint-disable-next-line no-param-reassign
+      matrix.style.gridTemplate = `repeat(${rowSize}, 2rem) / repeat(${columnSize}, 2rem)`;
+      const size = rowSize * columnSize;
+      for (let i = 0; i < size; i += 1) {
+        const matrixElement = document.createElement('input');
+        matrixElement.className = 'mat-element';
+        matrix.appendChild(matrixElement);
+      }
+    });
   } else {
     // eslint-disable-next-line no-alert
     alert('Rows must be equal to columns');
@@ -36,12 +39,18 @@ function generateMatrixElements(rowSize, columnSize) {
 }
 
 function createMatrix() {
-  enterButton.addEventListener('click', () => {
-    removeAllChildNodes(matrixContainer);
-    rows = document.querySelector('.rows').value;
-    columns = document.querySelector('.columns').value;
+  matrixDropdown.addEventListener('change', (e) => {
+    matrixContainer.forEach((matrix) => {
+      removeAllChildNodes(matrix);
+      rows = e.target.value;
+      columns = e.target.value;
+    });
     generateMatrixElements(rows, columns);
   });
 }
+
+// function clearMatrix() {
+
+// }
 
 createMatrix();
